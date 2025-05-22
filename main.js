@@ -380,7 +380,12 @@ function buildQrcode(shortUrl) {
 
     image: null
   };
-  $("#qrcode-" + shortUrl.replace(/(:|\.|\[|\]|,|=|@)/g, "\\$1").replace(/(:|\#|\[|\]|,|=|@)/g, "\\$1") ).empty().qrcode(options);
+  // style="background: white;width:260px;height:260px;
+  const $qr = $("#qrcode-" + shortUrl.replace(/(:|\.|\[|\]|,|=|@)/g, "\\$1").replace(/(:|\#|\[|\]|,|=|@)/g, "\\$1") )
+  // $("#qrcode-" + shortUrl.replace(/(:|\.|\[|\]|,|=|@)/g, "\\$1").replace(/(:|\#|\[|\]|,|=|@)/g, "\\$1") ).empty().qrcode(options);
+  $qr.setAttribute('style', 'background:white;width:256px;height:256px;');
+  $qr.empty().qrcode(options);
+  
 }
 
 function buildValueTxt(longUrl) {
