@@ -162,7 +162,7 @@ function addUrlToList(shortUrl, longUrl) {
   qrcodeBtn.classList.add("btn", "btn-info")
   qrcodeBtn.setAttribute('onclick', 'buildQrcode(\"' + shortUrl + '\")')
   qrcodeBtn.setAttribute('id', 'qrcodeBtn-' + shortUrl)
-  qrcodeBtn.innerText = "QR"
+  qrcodeBtn.innerText = "二维码"
   keyItem.appendChild(qrcodeBtn)
   
   child.appendChild(keyItem)
