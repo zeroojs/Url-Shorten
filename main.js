@@ -1,6 +1,6 @@
 let res
 
-let apiSrv = window.location.pathname
+let apiSrv = 'https://shorturl.luckyoung.workers.dev'
 let password_value = document.querySelector("#passwordText").value
 // let apiSrv = "https://journal.crazypeace.workers.dev"
 // let password_value = "journaljournal"
