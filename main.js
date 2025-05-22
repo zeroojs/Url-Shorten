@@ -1,7 +1,7 @@
 let res
 
 let rootShortUrl = 'https://syoe.cn'
-let apiSrv = 'https://shorturlapi.wlittleyang.workers.dev'
+let apiSrv = 'https://syoe.cn'
 let password_value = document.querySelector("#passwordText").value
 // let apiSrv = "https://journal.crazypeace.workers.dev"
 // let password_value = "journaljournal"
