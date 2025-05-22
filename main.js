@@ -41,7 +41,7 @@ function shorturl() {
       // add to urlList on the page
       addUrlToList(keyPhrase, valueLongURL)
 
-      document.getElementById("result").innerHTML = window.location.protocol + "//" + window.location.host + "/" + res.key;
+      document.getElementById("result").innerHTML = apiSrv + "/" + res.key;
     } else {
       document.getElementById("result").innerHTML = res.error;
     }
@@ -152,7 +152,7 @@ function addUrlToList(shortUrl, longUrl) {
   // 短链接信息 Short url
   let keyTxt = document.createElement('span')
   keyTxt.classList.add("form-control", "rounded-bottom-0")
-  keyTxt.innerText = window.location.protocol + "//" + window.location.host + "/" + shortUrl
+  keyTxt.innerText = apiSrv + "/" + shortUrl
   keyItem.appendChild(keyTxt)
 
   // 显示二维码按钮
@@ -353,7 +353,7 @@ function buildQrcode(shortUrl) {
 
     // content
     // 要转换的文本
-    text: window.location.protocol + "//" + window.location.host + "/" + shortUrl,
+    text: apiSrv + "/" + shortUrl,
 
     // corner radius relative to module width: 0.0 .. 0.5
     radius: 0,
