@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
   <title>短链接生成器</title>
   <link rel="stylesheet" href="./vender/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="./styles.css">
@@ -19,14 +19,14 @@
 
           <span class="input-group-text" id="basic-addon1">长地址</span>
 
-        <input type="text" class="form-control" id="longURL" aria-describedby="basic-addon1" placeholder="Example: https://example.com/" oninput="loadUrlList()">
+        <input type="text" class="form-control" id="longURL" aria-describedby="basic-addon1" placeholder="例如： https://example.com/" oninput="loadUrlList()">
       </div>
 
       <div class="input-group mb-3">
 
           <span class="input-group-text" id="basic-addon2">自定义短链接</span>
 
-        <input type="text" class="form-control" id="keyPhrase" aria-describedby="basic-addon2" placeholder="As you wish">
+        <input type="text" class="form-control" id="keyPhrase" aria-describedby="basic-addon2" placeholder="例如：happy">
       </div>
 
       <div class="input-group mb-3">
@@ -49,9 +49,9 @@
     <div class="card-body">
       <h5 class="card-title"> </h5>
       <div class="input-group mb-3">
-        <button class="btn btn-success" type="button" onclick='loadUrlList()' id="loadListBtn">load localStorage</button>
-        <button class="btn btn-danger" type="button" onclick='clearLocalStorage()' id="clearlocalStgBtn">clear localStorage</button>
-        <button class="btn btn-info" type="button" onclick='loadKV()' id="loadKV2localStgBtn">load KV to localStorage</button>
+        <button class="btn btn-success" type="button" onclick='loadUrlList()' id="loadListBtn">加载本地存储</button>
+        <button class="btn btn-danger" type="button" onclick='clearLocalStorage()' id="clearlocalStgBtn">清除本地存储</button>
+        <button class="btn btn-info" type="button" onclick='loadKV()' id="loadKV2localStgBtn">加载数据库存储</button>
       </div>
 
       <div class="card-text">

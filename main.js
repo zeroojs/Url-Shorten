@@ -310,7 +310,8 @@ function loadKV() {
         keyPhrase = item.key;
         valueLongURL = item.value;
         // save to localStorage
-        localStorage.setItem(keyPhrase, valueLongURL);  
+        localStorage.setItem(keyPhrase, valueLongURL);
+        loadUrlList();
       });
 
     } else {
@@ -350,7 +351,7 @@ function buildQrcode(shortUrl) {
     fill: '#000',
 
     // background color or image element, null for transparent background
-    background: null,
+    background: 'white',
 
     // content
     // 要转换的文本
@@ -383,7 +384,7 @@ function buildQrcode(shortUrl) {
   // style="background: white;width:260px;height:260px;
   const $qr = $("#qrcode-" + shortUrl.replace(/(:|\.|\[|\]|,|=|@)/g, "\\$1").replace(/(:|\#|\[|\]|,|=|@)/g, "\\$1") )
   // $("#qrcode-" + shortUrl.replace(/(:|\.|\[|\]|,|=|@)/g, "\\$1").replace(/(:|\#|\[|\]|,|=|@)/g, "\\$1") ).empty().qrcode(options);
-  $qr.setAttribute('style', 'background:white;width:256px;height:256px;');
+  $qr.attr('style', 'margin: 12px 0;border: 8px solid white; width: 272px;');
   $qr.empty().qrcode(options);
   
 }

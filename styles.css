@@ -34,6 +34,9 @@ img {
 .list-group-item {
   font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+input::placeholder {
+  color: #ccc !important;
+}
 @media (max-width: 769px) {
   .card {
     width: 80%;
